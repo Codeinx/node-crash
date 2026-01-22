@@ -1,0 +1,26 @@
+const fs = require('fs');
+const path = require('path');
+
+//Create folder
+fs.mkdir(path.join(__dirname, '/test'), {}, err => {
+    if (err)
+        throw err;
+    console.log('Folder created...');
+});
+
+//Create and write to file
+const filePath = path.join(__dirname, '/test', 'hello.txt');
+const theTextFile = path.basename(filePath);
+
+fs.writeFile(filePath, 'Hello World!', err => {
+    if (err)
+        throw err;
+    console.log('File written to', filePath);
+});
+
+//Appending to a written file
+fs.appendFile(path.join(__dirname, '/test', 'hello.txt'), '\nnew life!', err => {
+    if (err)
+        throw err;
+    console.log('Text appended to', theTextFile);
+});

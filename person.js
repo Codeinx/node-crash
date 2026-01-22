@@ -1,3 +1,8 @@
+//Module Wrapper Function
+// (function (exports, require, module, __filename, __dirname){
+
+// })
+
 const person = {
     name: 'John',
     age: 30
