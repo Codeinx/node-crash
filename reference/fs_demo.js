@@ -45,6 +45,6 @@ const path = require('path');
 fs.rename(path.join(__dirname, '/test', 'hello.txt'), path.join(__dirname, '/test', 'helloworld.txt'), err => {
     if (err)
         throw err;
-    console.log('File renamed to', __dirname);
+    console.log('File renamed to');
     }
 );
