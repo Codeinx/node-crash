@@ -10,21 +10,21 @@ const path = require('path');
 // );
 
 //Create and write to file
-const filePath = path.join(__dirname, '/test', 'hello.txt');
-const theTextFile = path.basename(filePath);
+// const filePath = path.join(__dirname, '/test', 'hello.txt');
+// const theTextFile = path.basename(filePath);
 
-fs.writeFile(filePath, 'Hello World!', err => {
-    if (err)
-        throw err;
-    console.log('File written to', filePath);
+// fs.writeFile(filePath, 'Hello World!', err => {
+//     if (err)
+//         throw err;
+//     console.log('File written to', filePath);
 
-    fs.appendFile(path.join(__dirname, '/test', 'hello.txt'), '\nnew life!', err => {
-        if (err)
-            throw err;
-        console.log('Text appended to', theTextFile);
-    });
-    }
-);
+//     fs.appendFile(path.join(__dirname, '/test', 'hello.txt'), '\nnew life!', err => {
+//         if (err)
+//             throw err;
+//         console.log('Text appended to', theTextFile);
+//     });
+//     }
+// );
 
 //Appending to a written file
 // fs.appendFile(path.join(__dirname, '/test', 'hello.txt'), '\nnew life!', err => {
@@ -32,3 +32,11 @@ fs.writeFile(filePath, 'Hello World!', err => {
 //         throw err;
 //     console.log('Text appended to', theTextFile);
 // });
+
+//Read file
+fs.readFile(path.join(__dirname, 'text', 'hello.txt'), 'utf8', (err, data) => {
+    if (err)
+        throw err;
+    console.log(data);
+    }
+);
