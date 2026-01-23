@@ -107,7 +107,7 @@ const server = http.createServer((req, res) => {
             }
         } else {
             //Success
-            res.writeHead(200, { 'Content-Type': 'text/html' });
+            res.writeHead(200, { 'Content-Type': contentType });
             res.end(content, 'utf8');
         }
     });
